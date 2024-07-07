@@ -21,11 +21,17 @@ Secondary Text Color: #777, rgb(102, 200, 115), rgb(245, 70, 93), rgb(255, 203, 
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
   color: rgba(51, 51, 51);
   background-color: #f3f3f3;
+  overflow-x: hidden;
 }
 
 .main-container {

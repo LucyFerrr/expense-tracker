@@ -3,18 +3,9 @@
 /* CALCULATION: 1200 / 16 = 75em*/
 /***********************/
 @media (max-width: 75em) {
-  html {
-    overflow-x: hidden;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0 auto;
-  }
   .main-title {
     font-size: 2.5rem;
+    margin: 1rem;
   }
   .summary-section,
   .income-form-container {
@@ -37,8 +28,9 @@
   #income-category {
     width: 6rem;
   }
-  .expense-form-container {
-    width: 700px;
+  .expense-form-container,
+  .transaction-history {
+    width: 43.75rem;
   }
   #expense-form {
     display: grid;
@@ -67,7 +59,7 @@
     justify-self: end;
   }
   .transaction-history {
-    width: 1120px;
+    width: 70rem;
   }
   #filter-category,
   #interval {
@@ -81,7 +73,7 @@
   }
   .transaction-list,
   .pagination {
-    width: 550px;
+    width: 34.375rem;
   }
   #expense-vs-income-chart {
     width: 31.5rem !important;
@@ -328,11 +320,8 @@
 /* CALCULATION: 480 / 16 = 30em*/
 /***********************/
 @media (max-width: 30em) {
-  html {
-    overflow-x: hidden;
-  }
   .main-title {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
   .content-container {
     display: grid;
@@ -343,15 +332,16 @@
     margin-bottom: 6rem;
   }
   .first-col-container {
-    grid-template-rows: 1fr;
     gap: 1rem;
+  }
+  .summary-section,
+  .income-form-container,
+  .expense-form-container,
+  .transaction-history {
+    width: 25rem;
   }
   .summary-section {
     height: 9rem;
-    width: 25rem;
-  }
-  .income-form-container {
-    width: 25rem;
   }
   #income-amount {
     width: 14.04rem;
@@ -371,15 +361,12 @@
   .slider:before {
     width: 16px;
     height: 16px;
-    /* left: -5px; */
   }
   .expense-form-container {
     height: 14rem;
     margin-bottom: 1rem;
-    width: 25rem;
   }
   .transaction-history {
-    width: 25rem;
     padding: 0;
   }
   .history-table {
@@ -400,14 +387,12 @@
     height: 2rem;
   }
   .transaction-chart,
-  .pagination {
+  .pagination,
+  .transaction-list {
     width: 20rem;
   }
   .pagination {
     padding-bottom: 2rem;
-  }
-  .transaction-list {
-    width: 20rem;
   }
   .category-icon {
     font-size: 1.5rem;
@@ -465,5 +450,44 @@
   }
   .swal2-actions {
     margin: 0rem auto 0;
+  }
+}
+
+/***********************/
+/* BELOW 412px (Phones (Portrait)) */
+/* CALCULATION: 412 / 16 = 25.75em*/
+/***********************/
+@media (max-width: 25.75em) {
+  .dark-mode-toggle {
+    top: -2.5rem;
+    left: 3rem;
+  }
+  .first-col-container {
+    justify-items: center;
+  }
+  .summary-section,
+  .income-form-container,
+  .expense-form-container,
+  .transaction-history {
+    width: 24rem;
+  }
+  #income-amount {
+    width: 13.04rem;
+  }
+  #description {
+    width: 22rem;
+  }
+  #category {
+    width: 11rem;
+  }
+  .swal2-popup {
+    width: 23rem;
+    height: 20rem;
+  }
+  #edit-amount,
+  #edit-category,
+  #edit-description {
+    width: 20rem;
+    height: 2.5rem;
   }
 }
