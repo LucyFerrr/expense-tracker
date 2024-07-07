@@ -497,4 +497,7 @@
     width: 20rem;
     height: 2.5rem;
   }
+  .swal2-title {
+    align-self: center;
+  }
 }
