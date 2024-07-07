@@ -3,6 +3,9 @@
 /* CALCULATION: 1200 / 16 = 75em*/
 /***********************/
 @media (max-width: 75em) {
+  html {
+    overflow-x: hidden;
+  }
   body {
     display: flex;
     justify-content: center;
@@ -325,6 +328,9 @@
 /* CALCULATION: 480 / 16 = 30em*/
 /***********************/
 @media (max-width: 30em) {
+  html {
+    overflow-x: hidden;
+  }
   .main-title {
     margin-bottom: 1rem;
   }
