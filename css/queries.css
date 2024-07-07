@@ -3,6 +3,13 @@
 /* CALCULATION: 1200 / 16 = 75em*/
 /***********************/
 @media (max-width: 75em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
   .main-title {
     font-size: 2.5rem;
     margin: 1rem;
