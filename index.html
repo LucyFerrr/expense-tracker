@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Track your expenses effortlessly with our intuitive Expense Tracker app. Whether you're managing personal finances or monitoring business expenditures, our app provides a seamless experience to help you stay organized and in control of your budget."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- For WEB Icon -->
+    <link rel="icon" href="img/favicon.png" />
+    <!-- For IOS Icon -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <!-- For ANDROID Icon -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- For Googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- For Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+
+    <!-- For IconIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- For SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- For Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Expense Tracker</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="main-title">Expense Tracker</h1>
+      </header>
+
+      <main class="main-container">
+        <div class="content-container">
+          <div class="first-col-container">
+            <div class="summary-section">
+              <h2 class="section-title">Overview</h2>
+
+              <div class="summary-amounts">
+                <p class="summary-amount" id="summary-income">₱ 0.00</p>
+                <p class="summary-amount" id="summary-expense">₱ 0.00</p>
+                <p class="summary-amount" id="summary-balance">₱ 0.00</p>
+              </div>
+
+              <div class="summary-labels">
+                <p class="summary-label">Income</p>
+                <p class="summary-label">Expense</p>
+                <p class="summary-label">Balance</p>
+              </div>
+            </div>
+
+            <div class="income-form-container">
+              <h2 class="section-title">Income</h2>
+              <form id="income-form">
+                <div>
+                  <input
+                    type="number"
+                    id="income-amount"
+                    placeholder="Amount"
+                    required
+                  />
+                  <select id="income-category" required>
+                    <option value="Salary">Salary</option>
+                    <option value="Other">Carry Over</option>
+                  </select>
+                </div>
+                <button class="submit-btn-income" type="submit">
+                  Add Income
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="second-col-container">
+            <div class="dark-mode-toggle">
+              <div class="dark-mode-switch">
+                <p class="dark-mode-label">Dark mode:</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="expense-form-container">
+              <h2 class="section-title">Expense</h2>
+              <form id="expense-form">
+                <div>
+                  <input
+                    type="text"
+                    id="description"
+                    placeholder="Description"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="number"
+                    id="amount"
+                    placeholder="Amount"
+                    required
+                  />
+
+                  <select id="category" required>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <button class="submit-btn" type="submit">Add Expense</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="transaction-history">
+          <h2 class="section-title">History</h2>
+          <div class="history-table">
+            <div class="filter-and-list">
+              <select id="filter-category">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+                <option value="Salary">Salary</option>
+                <option value="Carry Over">Carry Over</option>
+              </select>
+              <div class="transaction-list" id="transaction-list">
+                <!-- <div class="expense-container">
+                </div> -->
+              </div>
+              <div class="pagination">
+                <button id="prev-page" disabled>
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </button>
+                <div id="pagination-numbers"></div>
+                <button id="next-page">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+
+            <div class="transaction-chart">
+              <div class="interval-container">
+                <label class="interval-label" for="interval"
+                  >Select Interval:
+                </label>
+                <select id="interval">
+                  <option value="yearly">Yearly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="daily">Daily</option>
+                </select>
+              </div>
+              <div>
+                <canvas canvas id="expense-vs-income-chart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="balance-summary">
+            <p class="summary-text">Income:</p>
+            <p id="total-incomes"></p>
+            <p class="summary-text">Expense:</p>
+            <p id="total-expenses"></p>
+            <p class="summary-text">Balance:</p>
+            <p id="total-balance"></p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+  <script src="./js/dark-mode.js"></script>
+  <script src="./js/chart.js"></script>
+</html>

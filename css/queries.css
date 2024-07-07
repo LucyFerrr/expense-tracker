@@ -1,0 +1,463 @@
+/***********************/
+/* BELOW 1200px (Tablets (Landscape)) */
+/* CALCULATION: 1200 / 16 = 75em*/
+/***********************/
+@media (max-width: 75em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .summary-section,
+  .income-form-container {
+    width: 25rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .summary-amounts {
+    font-size: 1.1rem;
+  }
+  #income-amount,
+  #income-category,
+  .submit-btn-income {
+    height: 2.5rem;
+  }
+  #income-amount {
+    width: 8rem;
+  }
+  #income-category {
+    width: 6rem;
+  }
+  .expense-form-container {
+    width: 700px;
+  }
+  #expense-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  #expense-form:nth-child(2) {
+    display: grid;
+  }
+  #description,
+  #amount,
+  #category,
+  .submit-btn {
+    height: 2.5rem;
+  }
+  #description {
+    width: 41rem;
+  }
+  #amount {
+    width: 20rem;
+  }
+  #category {
+    width: 20.2rem;
+  }
+  .submit-btn {
+    justify-self: end;
+  }
+  .transaction-history {
+    width: 1120px;
+  }
+  #filter-category,
+  #interval {
+    height: 2.3rem;
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+  .history-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .transaction-list,
+  .pagination {
+    width: 550px;
+  }
+  #expense-vs-income-chart {
+    width: 31.5rem !important;
+    height: 17.5rem !important;
+  }
+  .description,
+  .amount {
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 0.7rem;
+  }
+  .income-expense-type {
+    padding: 4px 8px;
+  }
+  .action-btns,
+  .category-icon-container {
+    padding: 5px;
+  }
+}
+
+/***********************/
+/* BELOW 1024px (Laptop) */
+/* CALCULATION: 1024 / 16 = 64em*/
+/***********************/
+@media (max-width: 64em) {
+  .expense-form-container {
+    width: 35rem;
+  }
+  #income-form {
+    gap: 0.5rem;
+  }
+  #income-amount {
+    margin-right: 0.5rem;
+  }
+  #description {
+    width: 33rem;
+  }
+  #amount {
+    width: 16rem;
+  }
+  #category {
+    width: 16.1rem;
+  }
+  .submit-btn-income {
+    width: 7rem;
+  }
+  .history-table {
+    gap: 1rem;
+  }
+  .transaction-history {
+    width: 984px;
+  }
+  .transaction-list,
+  .pagination {
+    width: 450px;
+  }
+  .income-container-values,
+  .expense-container-values {
+    column-gap: 2rem;
+  }
+  .description {
+    width: 7rem;
+  }
+  .amount {
+    width: 6rem;
+  }
+  #expense-vs-income-chart {
+    width: 30rem !important;
+    height: 17.5rem !important;
+  }
+  .swal2-popup {
+    width: 29rem;
+    height: 20rem;
+  }
+  #edit-amount,
+  #edit-category {
+    width: 25rem;
+    height: 2.5rem;
+  }
+  .swal2-actions {
+    margin: 1.1em auto 0;
+  }
+}
+
+/***********************/
+/* BELOW 960px (Tablets (Portrait)) */
+/* CALCULATION: 960 / 16 = 60em*/
+/***********************/
+@media (max-width: 60em) {
+  .main-title {
+    font-size: 2.4rem;
+  }
+  .expense-form-container {
+    width: 500px;
+  }
+  #description {
+    width: 29rem;
+  }
+  #amount {
+    width: 10rem;
+  }
+  #category {
+    width: 18rem;
+  }
+  .transaction-history {
+    width: 924px;
+  }
+  .history-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .transaction-list,
+  .pagination {
+    width: 430px;
+  }
+  .transaction-list {
+    height: 15rem;
+  }
+  .income-result-container {
+    padding: 0.8rem;
+  }
+  .income-container-values,
+  .expense-container-values {
+    column-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  #expense-vs-income-chart {
+    width: 27.5rem !important;
+    height: 15rem !important;
+  }
+  .description {
+    width: 9rem;
+  }
+}
+
+/***********************/
+/* BELOW 768px (Phones (Landscape)) */
+/* CALCULATION: 768 / 16 = 48em*/
+/***********************/
+@media (max-width: 48em) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .content-container {
+    gap: 1rem;
+  }
+  .first-col-container {
+    grid-template-rows: 0.9fr;
+  }
+  .second-col-container {
+    gap: 1rem;
+  }
+  .summary-amounts {
+    gap: 1rem;
+  }
+  .summary-labels {
+    gap: 1rem;
+  }
+  .summary-amount {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .summary-section,
+  .income-form-container {
+    width: 20rem;
+  }
+  .summary-section {
+    height: 8rem;
+  }
+  #income-form {
+    gap: 0.5rem;
+    display: grid;
+  }
+  #income-amount {
+    margin-right: 0.5rem;
+    width: 9rem;
+  }
+  #income-category {
+    width: 8.3rem;
+  }
+  .submit-btn-income {
+    justify-self: end;
+    width: 7rem;
+  }
+  .expense-form-container {
+    width: 400px;
+    height: 16.5rem;
+  }
+  #description {
+    width: 23rem;
+  }
+  #amount {
+    width: 10rem;
+  }
+  #category {
+    width: 12.1rem;
+  }
+  .transaction-history {
+    width: 736px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+  .history-table {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0fr;
+    justify-items: center;
+    align-items: center;
+  }
+  .filter-and-list {
+    width: 36rem;
+    display: grid;
+  }
+  .transaction-list,
+  .pagination {
+    width: 36rem;
+    justify-self: center;
+  }
+  .amount {
+    justify-self: end;
+  }
+  .income-result-container,
+  .expense-result-container {
+    justify-content: center;
+  }
+  .pagination {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .transaction-chart {
+    grid-row: 2;
+    width: 36rem;
+  }
+  #expense-vs-income-chart {
+    width: 36rem !important;
+    height: 19rem !important;
+  }
+}
+
+/***********************/
+/* BELOW 480px (Phones (Portrait)) */
+/* CALCULATION: 480 / 16 = 30em*/
+/***********************/
+@media (max-width: 30em) {
+  .main-title {
+    margin-bottom: 1rem;
+  }
+  .content-container {
+    display: grid;
+    height: 30rem;
+    width: 30rem;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    margin-bottom: 6rem;
+  }
+  .first-col-container {
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
+  .summary-section {
+    height: 9rem;
+    width: 25rem;
+  }
+  .income-form-container {
+    width: 25rem;
+  }
+  #income-amount {
+    width: 14.04rem;
+  }
+  .dark-mode-label {
+    display: none;
+  }
+  .dark-mode-toggle {
+    position: absolute;
+    top: -2.5rem;
+    left: 2.5rem;
+  }
+  .switch {
+    width: 50px;
+    height: 24px;
+  }
+  .slider:before {
+    width: 16px;
+    height: 16px;
+    /* left: -5px; */
+  }
+  .expense-form-container {
+    height: 14rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+  }
+  .transaction-history {
+    width: 25rem;
+    padding: 0;
+  }
+  .history-table {
+    align-items: start;
+    grid-template-rows: 1fr 50%;
+  }
+  .transaction-history h2 {
+    padding-top: 1rem;
+  }
+  .filter-and-list {
+    width: 20rem;
+  }
+  #filter-category,
+  #interval,
+  .interval-label {
+    font-size: 0.8rem;
+    width: 5rem;
+    height: 2rem;
+  }
+  .transaction-chart,
+  .pagination {
+    width: 20rem;
+  }
+  .pagination {
+    padding-bottom: 2rem;
+  }
+  .transaction-list {
+    width: 20rem;
+  }
+  .category-icon {
+    font-size: 1.5rem;
+  }
+  .btns {
+    font-size: 1.3rem;
+  }
+  .income-result-container,
+  .expense-result-container {
+    gap: 0.4rem;
+    padding: 0.5rem 0.3rem;
+  }
+  .description,
+  .amount {
+    font-size: 0.9rem;
+  }
+  .description {
+    width: 4rem;
+  }
+  .income-expense-type {
+    display: none;
+  }
+  #expense-vs-income-chart {
+    width: 20rem !important;
+    height: 10rem !important;
+  }
+  .balance-summary {
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .summary-text {
+    font-size: 0.4rem;
+    width: 3rem;
+  }
+  #total-incomes,
+  #total-expenses,
+  #total-balance {
+    font-size: 0.6rem;
+    margin-right: 1rem;
+  }
+  .swal2-popup {
+    width: 25rem;
+    height: 20rem;
+  }
+  #edit-amount,
+  #edit-category,
+  #edit-description {
+    width: 22rem;
+    height: 2.5rem;
+  }
+  .swal2-actions {
+    margin: 0rem auto 0;
+  }
+}

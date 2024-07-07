@@ -1,0 +1,828 @@
+/* 
+****************** Light Mode Palette ******************
+Cards Color: #fff, rgb(57, 179, 133), rgb(155, 225, 93), rgb(229, 42, 90), rgb(255, 88, 95)
+Background Color: #f3f3f3
+Button Color: #fff, rgb(35, 167, 255)
+Primary Text Color: rgba(51, 51, 51)
+Secondary Text Color: #777, rgb(102, 200, 115), rgb(245, 70, 93), rgb(255, 203, 3)
+
+
+****************** Dark Mode Palette ******************
+Cards Color: #282829, rgb(57, 179, 133), rgb(155, 225, 93), rgb(229, 42, 90), rgb(255, 88, 95)
+Background Color: #131314
+Button Color: #fff
+Primary Text Color: #fff
+Secondary Text Color: #777, rgb(102, 200, 115), rgb(245, 70, 93), rgb(255, 203, 3)
+*/
+
+/******************* Summary Section *******************/
+.summary-section {
+  background-color: #fff;
+  padding: 1rem;
+  width: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 10px rgba(0, 0, 0, 0.1);
+}
+
+.summary-amounts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 1.3rem;
+  gap: 3rem;
+  justify-items: center;
+  margin-bottom: 0.5rem;
+}
+
+#summary-income {
+  color: rgb(102, 200, 115);
+}
+
+#summary-expense {
+  color: rgb(245, 70, 93);
+}
+
+#summary-balance {
+  color: rgb(255, 203, 3);
+}
+
+.summary-labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 0.8rem;
+  gap: 3rem;
+  justify-items: center;
+  padding-bottom: 1rem;
+  font-weight: 500;
+  color: #777;
+}
+
+/*******************Income Section *******************/
+.income-form-container {
+  grid-row: 2;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 10px rgba(0, 0, 0, 0.1);
+}
+
+#income-form {
+  display: flex;
+  gap: 1rem;
+}
+
+#income-amount {
+  height: 3rem;
+  width: 10rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease 0s;
+}
+
+#income-amount:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#income-amount::placeholder {
+  color: rgba(51, 51, 51);
+}
+
+#income-category {
+  height: 3rem;
+  width: 6rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#income-category:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn-income,
+.submit-btn-income:link,
+.submit-btn-income:visited {
+  background-color: #fff;
+  height: 3rem;
+  width: 10rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+.submit-btn-income:hover,
+.submit-btn-income:active {
+  cursor: pointer;
+  background-color: #eee;
+  /* color: #fbfada; */
+}
+
+/******************* Dark Mode Section *******************/
+.dark-mode-toggle {
+  grid-row: 1;
+  align-content: center;
+  height: 34px;
+}
+
+/* Slider wrapper for centering and spacing */
+.dark-mode-switch {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dark-mode-label {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+body.dark-mode {
+  background-color: #131314 !important;
+  color: #fff !important;
+}
+
+body.light-mode {
+  background-color: #f3f3f3 !important;
+  color: #000 !important;
+}
+
+.dark-mode .main-title,
+.dark-mode .section-title,
+.dark-mode .p {
+  color: #fff !important;
+}
+
+.light-mode .main-title,
+.light-mode .section-title,
+.light-mode .p {
+  color: #000 !important;
+}
+
+.dark-mode .summary-section,
+.dark-mode .transaction-history {
+  background-color: #282829 !important;
+}
+
+.light-mode .summary-section,
+.light-mode .transaction-history {
+  background-color: #fff !important;
+}
+
+.dark-mode .income-form-container,
+.dark-mode .expense-form-container {
+  background-image: linear-gradient(to left top, #282829, #282829) !important;
+}
+
+.light-mode .income-form-container {
+  background-image: linear-gradient(
+    to left top,
+    rgb(57, 179, 133),
+    rgb(155, 225, 93)
+  ) !important;
+}
+
+.light-mode .expense-form-container {
+  background-image: linear-gradient(
+    to left top,
+    rgb(229, 42, 90),
+    rgb(255, 88, 95)
+  ) !important;
+}
+
+.dark-mode .category-icon-container {
+  background-color: #131314 !important;
+}
+
+.light-mode .category-icon-container {
+  background-color: #f3f3f3 !important;
+}
+
+.dark-mode .category-icon,
+.dark-mode .btn-edit,
+.dark-mode .btn-trash {
+  background-color: #131314 !important;
+  color: #fff !important;
+}
+
+.light-mode .category-icon,
+.light-mode .btn-edit,
+.light-mode .btn-trash {
+  color: #000 !important;
+}
+
+.dark-mode .btn-edit:hover {
+  color: rgb(86, 255, 43) !important;
+}
+
+.dark-mode .btn-trash:hover {
+  color: rgb(255, 88, 95) !important;
+}
+
+.dark-mode .btn-edit {
+  color: rgb(102, 200, 115) !important;
+}
+
+.dark-mode .btn-trash {
+  color: rgb(229, 42, 90) !important;
+}
+
+.light-mode .btn-edit:hover {
+  color: rgb(102, 200, 115) !important;
+}
+
+.light-mode .btn-trash:hover {
+  color: rgb(255, 88, 95) !important;
+}
+
+.light-mode .btn-edit {
+  color: rgb(51, 51, 51) !important;
+}
+
+.light-mode .btn-trash {
+  color: rgb(229, 42, 90) !important;
+}
+
+/******************* Slider Section *******************/
+/* Hide the default checkbox */
+.switch input {
+  display: none;
+}
+
+/* The switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1a1a1a;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(35, 167, 255);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #fff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/******************* Expense Section *******************/
+.expense-form-container {
+  padding: 1rem;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 10px rgba(0, 0, 0, 0.1);
+}
+
+#expense-form {
+  text-align: end;
+  margin-bottom: 1rem;
+}
+
+#description {
+  height: 3rem;
+  width: 48rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#description:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#description::placeholder {
+  color: rgba(51, 51, 51);
+}
+
+#amount {
+  height: 3rem;
+  width: 376px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#amount:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#amount::placeholder {
+  color: rgba(51, 51, 51);
+}
+
+#category {
+  height: 3rem;
+  width: 375px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#category:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn,
+.submit-btn:link,
+.submit-btn:visited {
+  background-color: #fff;
+  height: 3rem;
+  width: 10rem;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in;
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+/******************* Items Section *******************/
+.expense-result-container {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #f3f3f3;
+  align-items: center;
+}
+
+.expense-container-values {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  column-gap: 5rem;
+}
+
+.income-result-container {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: 1px solid #f3f3f3;
+  align-items: center;
+}
+
+.income-container-values {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  column-gap: 5rem;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 10rem;
+}
+
+.category-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  align-items: center;
+}
+
+.category-icon-container {
+  font-size: 2rem;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
+  border-radius: 10px;
+  display: grid;
+}
+
+.category {
+  color: #777;
+}
+
+.amount {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: end;
+}
+
+.date {
+  font-size: 0.8rem;
+  text-align: end;
+  align-self: center;
+  color: #777;
+}
+
+li {
+  border-radius: 10px;
+  background: rgba(255, 88, 96, 0.664);
+  margin: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-trash {
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  /* background-color: rgb(255, 132, 138); */
+}
+
+.btn-edit {
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  /* background-color: rgb(182, 252, 122); */
+}
+
+.action-btns,
+.action-btns:link,
+.action-btns:visited {
+  font-size: 1.6rem;
+  display: grid;
+  color: #333;
+  border: none;
+  padding: 10px;
+
+  transition: all 0.3s;
+  align-items: center;
+}
+
+.btn-trash:hover,
+.btn-trash:active {
+  color: #c9302c;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.btn-edit:hover,
+.btn-edit:active {
+  color: #3a5c45;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+.income-expense-type {
+  color: #fff;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+  padding: 5px 10px;
+  border-radius: 10rem;
+}
+
+.income-expense-type--income {
+  background-image: linear-gradient(
+    to left top,
+    rgb(57, 179, 133),
+    rgb(142, 255, 43)
+  );
+}
+
+.income-expense-type--expense {
+  background-image: linear-gradient(
+    to left top,
+    rgb(229, 42, 90),
+    rgb(255, 88, 95)
+  );
+}
+
+/******************* Transaction Section *******************/
+.transaction-history {
+  /* display: flex; */
+  background-color: #ffffff;
+  width: 1304px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 10px rgba(0, 0, 0, 0.1);
+}
+
+#filter-category {
+  /* font-size: 1rem; */
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: 1px solid black;
+}
+
+.history-table {
+  display: flex;
+  gap: 2rem;
+}
+
+.transaction-list {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  list-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 600px;
+  height: 17.5rem;
+}
+
+.transaction-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.transaction-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.transaction-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/******************* Pagination Section *******************/
+.pagination {
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#prev-page,
+#next-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 5rem;
+  height: 2rem; */
+  padding: 0.2rem 0.7rem;
+  margin-top: 1rem;
+  /* border-radius: 10px; */
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#prev-page,
+#prev-page:link,
+#prev-page:visited {
+  background-color: #f3f3f3;
+  color: rgb(51, 51, 51);
+  transition: all 0.3s;
+}
+
+#prev-page:hover,
+#prev-page:active {
+  cursor: pointer;
+  background-color: rgb(245, 70, 93);
+}
+
+#prev-page:disabled {
+  cursor: default;
+  background-color: rgba(216, 216, 216, 0.5);
+}
+
+#next-page,
+#next-page:link,
+#next-page:visited {
+  background-color: #f3f3f3;
+  color: rgb(51, 51, 51);
+  transition: all 0.3s;
+}
+
+#next-page:hover,
+#next-page:active {
+  cursor: pointer;
+  background-color: rgb(155, 225, 93);
+}
+
+#next-page:disabled {
+  cursor: default;
+  background-color: rgba(216, 216, 216, 0.5);
+}
+
+#pagination-numbers {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  background: none;
+  border: none;
+  gap: 1rem;
+}
+
+#pagination-numbers button {
+  background-color: rgba(0, 0, 0, 0);
+  color: #f3f3f3;
+  font-weight: 500;
+  border: 1px solid #f3f3f3 !important;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  /* text-align: center; */
+}
+
+#pagination-numbers button:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  color: rgb(51, 51, 51);
+}
+
+.light-mode #pagination-numbers button {
+  color: rgb(51, 51, 51);
+}
+
+.active {
+  /* border-bottom: 1px solid #f3f3f3 !important; */
+  background-color: #f3f3f3 !important;
+  color: rgb(51, 51, 51) !important;
+  transition: all 0.3s;
+}
+
+/******************* Summary Section *******************/
+.balance-summary {
+  display: flex;
+  /* grid-template-columns: 1fr 1.2fr 1fr 1.2fr 1fr 1.2fr; */
+  align-items: baseline;
+  /* width: 625px; */
+  margin-top: 1rem;
+  border-top: 1px solid #ddd;
+  justify-content: center;
+}
+
+.summary-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  margin-right: 0.3rem;
+  border-radius: 0 0 10px 10px;
+}
+
+#total-incomes {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+  margin-right: 3rem;
+  color: rgb(102, 200, 115);
+}
+
+#total-expenses {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+  margin-right: 3rem;
+  color: rgb(245, 70, 93);
+}
+
+#total-balance {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+  margin-right: 3rem;
+  color: rgb(255, 203, 3);
+}
+
+/******************* Transaction Chart Section *******************/
+.interval-container {
+  text-align: end;
+}
+
+.interval-label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+#interval {
+  /* font-size: 1rem; */
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: 1px solid black;
+}
+
+.transaction-chart {
+  justify-content: flex-end;
+  /* align-self: center; */
+}
+
+#expense-vs-income-chart {
+  width: 40rem !important;
+  height: 20rem !important;
+  border: 1px solid #ddd;
+}
+
+/******************* Edit Form Section *******************/
+
+.edit-expense-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.edit-label {
+  font-size: 0.9rem;
+  text-align: start;
+  margin-bottom: 0.3rem;
+}
+
+.edit-description-label {
+  padding-top: 1rem;
+  border-top: 2px solid #f3f3f3;
+}
+
+.edit-expense-description,
+.edit-expense-amount,
+.edit-expense-category {
+  height: 3rem;
+  width: 28rem;
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.edit-expense-description:focus,
+.edit-expense-amount:focus,
+.edit-expense-category:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.edit-income-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.edit-income-amount,
+.edit-income-category {
+  height: 3rem;
+  width: 28rem;
+  margin-bottom: 1.2rem;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+.edit-income-amount:focus,
+.edit-income-category:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
