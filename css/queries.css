@@ -113,6 +113,10 @@
   #income-form {
     gap: 0.5rem;
   }
+  #income-form div {
+    display: flex;
+    gap: 0rem;
+  }
   #income-amount {
     margin-right: 0.5rem;
   }
@@ -255,6 +259,7 @@
   #income-form {
     gap: 0.5rem;
     display: grid;
+    justify-items: flex-end;
   }
   #income-amount {
     margin-right: 0.5rem;

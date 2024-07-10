@@ -69,6 +69,11 @@ Secondary Text Color: #777, rgb(102, 200, 115), rgb(245, 70, 93), rgb(255, 203, 
   gap: 1rem;
 }
 
+#income-form div {
+  display: flex;
+  gap: 1rem;
+}
+
 #income-amount {
   height: 3rem;
   width: 10rem;
